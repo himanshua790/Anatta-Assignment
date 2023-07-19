@@ -16,12 +16,12 @@ async function main() {
       Number(options?.first)
     );
     const extractedInfo = fetchDataFromProducts(products);
-    const x = extractedInfo
+    const output = extractedInfo
       ?.map(
         (info) => `${info?.title} - Variant ${info?.variant} - $${info?.price}`
       )
       .join("\n");
-    console.log(x);
+    console.log(output, "\n\n\n", extractedInfo?.length);
   } catch (error) {
     console.log(error);
   }
